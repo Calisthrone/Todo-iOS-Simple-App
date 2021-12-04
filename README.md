@@ -1,12 +1,9 @@
 # Todo-iOS-Simple-App
 **Todo**, a simple iOS app using CRUD and Core Data
 
-
-
-
-
 **Todo** App is written in Swift and using CRUD operations with Core Data integration.
 
+<img width="394" alt="Screen Shot 2021-12-05 at 1 16 59 AM" src="https://user-images.githubusercontent.com/76989642/144726589-2c986b41-07ab-4f77-aa79-2af60ba9f803.png">
 
 ### Main App Features:
 - *Create new titled todos.*
