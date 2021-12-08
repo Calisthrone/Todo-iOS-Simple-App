@@ -3,7 +3,13 @@
 
 **Todo** App is written in Swift and using CRUD operations with Core Data integration.
 
-<img width="394" alt="Screen Shot 2021-12-05 at 1 16 59 AM" src="https://user-images.githubusercontent.com/76989642/144726589-2c986b41-07ab-4f77-aa79-2af60ba9f803.png">
+<img width="382" alt="1" src="https://user-images.githubusercontent.com/76989642/145259890-5d566796-e470-4b69-a917-1007ac087dea.png">   <img width="388" alt="2" src="https://user-images.githubusercontent.com/76989642/145259919-b5301acd-342a-4bea-b10f-12105772ef10.png">
+
+<img width="385" alt="3" src="https://user-images.githubusercontent.com/76989642/145259960-3f9f718d-1dbe-45d4-938d-e74dc13e96e5.png">   <img width="391" alt="4" src="https://user-images.githubusercontent.com/76989642/145259991-c27680be-efb1-47b0-9d56-94548fdb8712.png">
+
+
+
+
 
 ### Main App Features:
 - *Create new titled todos.*
