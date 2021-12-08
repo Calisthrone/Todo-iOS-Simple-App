@@ -1,5 +1,6 @@
 
 import UIKit
+import CleanyModal
 
 class TodoDetailsVC: UIViewController {
     
@@ -67,22 +68,46 @@ class TodoDetailsVC: UIViewController {
      */
     @IBAction func deleteBtnClicked(_ sender: Any) {
         
-        let alert = UIAlertController(title: "Delete Todo", message: "Do you really want to delete this todo?", preferredStyle: .actionSheet)
+        let deleteAlert = TodoAlertViewController(
+            title: "Delete Todo?",
+            message: "Do you really want to delete this todo?",
+            imageName: nil,
+            preferredStyle: CleanyAlertViewController.Style.actionSheet)
         
         // [self] -> capture self when needed: so we do not have to use self in closure
-        let confirmAction = UIAlertAction(title: "Yes, delete", style: .destructive) { [self] _ in
-            
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "TodoDeleted"), object: nil, userInfo: ["deletedIndex" : index as Any])
-            
-            navigationController?.popViewController(animated: true)
-        }
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let confirmDeleteAction = CleanyAlertAction(
+            title: "Yes, Delete!",
+            style: .destructive) { [self] _ in
+                
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "TodoDeleted"), object: nil, userInfo: ["deletedIndex" : index as Any])
+                
+                let deleteNoticeAlert = TodoAlertViewController(
+                    title: "Todo Deleted",
+                    message: "Successfuly deleted the todo",
+                    imageName: nil,
+                    preferredStyle: CleanyAlertViewController.Style.actionSheet)
+                
+                let deleteNoticeAction = CleanyAlertAction(
+                    title: "OK",
+                    style: .cancel) { _ in
+                        navigationController?.popViewController(animated: true)
+                    }
+                
+                deleteNoticeAlert.addAction(deleteNoticeAction)
+                
+                self.present(deleteNoticeAlert, animated: true, completion: nil)
+            }
         
-        alert.addAction(confirmAction)
-        alert.addAction(cancelAction)
+        let cancelDeleteAction = CleanyAlertAction(
+            title: "Cancel",
+            style: .cancel,
+            handler: nil)
         
-        self.present(alert, animated: true, completion: nil)
+        deleteAlert.addAction(confirmDeleteAction)
+        deleteAlert.addAction(cancelDeleteAction)
+        
+        self.present(deleteAlert, animated: true, completion: nil)
     }
     
     

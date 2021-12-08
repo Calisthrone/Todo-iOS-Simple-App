@@ -1,5 +1,6 @@
 
 import UIKit
+import CleanyModal
 
 class NewTodoVC: UIViewController {
     
@@ -68,18 +69,24 @@ class NewTodoVC: UIViewController {
             
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "NewTodoAdded"), object: nil, userInfo: ["NewTodoAdded" : newTodo])
             
-            let alert = UIAlertController(title: "Todo Craeted", message: "Success, a new todo was created!", preferredStyle: UIAlertController.Style.actionSheet)
+            let newTodoCreatedAlert = TodoAlertViewController(
+                title: "Todo Craeted",
+                message: "Success, a new todo was created!",
+                imageName: nil,
+                preferredStyle: CleanyAlertViewController.Style.actionSheet)
             
-            let alertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { _ in
-                self.tabBarController?.selectedIndex = 0
-                self.newTodoTitleLabel.text = ""
-                self.newTodoDetailsTextField.text = ""
-                self.todoImageView.image = nil
-            }
+            let confirmCreateTodoAction = CleanyAlertAction(
+                title: "OK",
+                style: .cancel) { _ in
+                    // empy the feilds in NewTodoVC before navigating to it
+                    self.tabBarController?.selectedIndex = 0
+                    self.newTodoTitleLabel.text = ""
+                    self.newTodoDetailsTextField.text = ""
+                    self.todoImageView.image = nil
+                }
             
-            alert.addAction(alertAction)
-            
-            self.present(alert, animated: true, completion: nil)
+            newTodoCreatedAlert.addAction(confirmCreateTodoAction)
+            self.present(newTodoCreatedAlert, animated: true, completion: nil)
             
         case false: // edit current todo
             
@@ -87,14 +94,21 @@ class NewTodoVC: UIViewController {
             
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "currentTodoEdited"), object: nil, userInfo: ["EdditedTodo" : todo, "editedIndex" : editedTodoIndex as Any])
             
-            let alert = UIAlertController(title: "Todo Edited", message: "Success, your current to do is edited!", preferredStyle: .actionSheet)
-            let alertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { _ in
-                self.navigationController?.popViewController(animated: true)
-                
-            }
-            alert.addAction(alertAction)
+            let updateTodoCreatedAlert = TodoAlertViewController(
+                title: "Todo Edited",
+                message: "Success, your current to do is edited!",
+                imageName: nil,
+                preferredStyle: CleanyAlertViewController.Style.actionSheet)
+
+            let confirmEditTodoAction = CleanyAlertAction(
+                title: "OK",
+                style: .cancel) { _ in
+                    self.navigationController?.popViewController(animated: true)
+                }
+
+            updateTodoCreatedAlert.addAction(confirmEditTodoAction)
             
-            self.present(alert, animated: true, completion: nil)
+            self.present(updateTodoCreatedAlert, animated: true, completion: nil)
             
         }
     }

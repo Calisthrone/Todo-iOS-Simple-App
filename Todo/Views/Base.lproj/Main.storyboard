@@ -17,24 +17,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Todo Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Uo-cb-jHd">
-                                <rect key="frame" x="20" y="355" width="114" height="30"/>
+                                <rect key="frame" x="20" y="407" width="114" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="iQz-UE-NwA">
-                                <rect key="frame" x="20" y="385" width="374" height="34"/>
+                                <rect key="frame" x="20" y="437" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Todo Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bA9-a4-n5g">
-                                <rect key="frame" x="20" y="427" width="144" height="30"/>
+                                <rect key="frame" x="20" y="479" width="144" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="A5L-i0-Mzx">
-                                <rect key="frame" x="20" y="465" width="374" height="309"/>
+                                <rect key="frame" x="20" y="517" width="374" height="257"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -49,13 +49,13 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WOw-1H-kZO">
-                                <rect key="frame" x="20" y="88" width="374" height="259"/>
+                                <rect key="frame" x="20" y="140" width="374" height="259"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="259" id="NNd-zk-AOF"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ylj-t7-5pu">
-                                <rect key="frame" x="301" y="310" width="93" height="31"/>
+                                <rect key="frame" x="301" y="362" width="93" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Add Image"/>
                                 <connections>
@@ -90,7 +90,7 @@
                             <constraint firstItem="A5L-i0-Mzx" firstAttribute="leading" secondItem="pX0-bJ-6Ep" secondAttribute="leading" id="zj0-tD-wAm"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="New Todo" largeTitleDisplayMode="never" id="r0e-lS-IY0"/>
+                    <navigationItem key="navigationItem" title="New Todo" largeTitleDisplayMode="always" id="r0e-lS-IY0"/>
                     <connections>
                         <outlet property="addOrEditImageBtn" destination="Ylj-t7-5pu" id="kPB-jk-ZWV"/>
                         <outlet property="editOrAddBtn" destination="pX0-bJ-6Ep" id="gNj-k6-mai"/>
@@ -115,58 +115,37 @@
                                 <rect key="frame" x="0.0" y="179" width="414" height="717"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TodoCell" rowHeight="136" id="Kvb-Is-4Ov" customClass="TodoCell" customModule="Todo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="136"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TodoCell" rowHeight="102" id="Kvb-Is-4Ov" customClass="TodoCell" customModule="Todo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="102"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kvb-Is-4Ov" id="45G-yu-iTt">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="136"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="102"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Z6i-Di-BCO" userLabel="Main Stack View">
-                                                    <rect key="frame" x="20" y="11" width="414" height="114"/>
-                                                    <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fW9-2u-Q10">
-                                                            <rect key="frame" x="0.0" y="19.5" width="75" height="75"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" secondItem="fW9-2u-Q10" secondAttribute="height" multiplier="1:1" id="6zS-14-pzJ"/>
-                                                                <constraint firstAttribute="width" constant="75" id="IrT-hA-aUE"/>
-                                                                <constraint firstAttribute="height" constant="75" id="U3J-hK-SAS"/>
-                                                            </constraints>
-                                                        </imageView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uwN-gF-PLw" userLabel="Title &amp; Date Stack View">
-                                                            <rect key="frame" x="79" y="31" width="335" height="52"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Todo Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="bKh-DB-gAG">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="301.5" height="24"/>
-                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23/9/2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpP-be-mGF">
-                                                                    <rect key="frame" x="0.0" y="32" width="66" height="20"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                            <constraints>
-                                                                <constraint firstItem="bKh-DB-gAG" firstAttribute="height" secondItem="uwN-gF-PLw" secondAttribute="height" multiplier="0.462366" id="KcJ-hE-3Ox"/>
-                                                                <constraint firstItem="bKh-DB-gAG" firstAttribute="width" secondItem="uwN-gF-PLw" secondAttribute="width" multiplier="0.9" id="Ply-Yv-7lx"/>
-                                                                <constraint firstItem="bKh-DB-gAG" firstAttribute="top" secondItem="uwN-gF-PLw" secondAttribute="top" id="f6d-aT-1nw"/>
-                                                            </constraints>
-                                                        </stackView>
-                                                    </subviews>
-                                                </stackView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fW9-2u-Q10">
+                                                    <rect key="frame" x="8" y="2" width="83" height="98"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="fW9-2u-Q10" secondAttribute="height" id="phg-hh-Rl6"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Todo Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="bKh-DB-gAG">
+                                                    <rect key="frame" x="99" y="39" width="92.5" height="24"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Z6i-Di-BCO" firstAttribute="leading" secondItem="45G-yu-iTt" secondAttribute="leadingMargin" id="CLa-oo-GPv"/>
-                                                <constraint firstItem="Z6i-Di-BCO" firstAttribute="width" secondItem="45G-yu-iTt" secondAttribute="width" id="fdP-fj-QIX"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Z6i-Di-BCO" secondAttribute="bottom" id="mFd-b5-0lS"/>
-                                                <constraint firstItem="Z6i-Di-BCO" firstAttribute="top" secondItem="45G-yu-iTt" secondAttribute="topMargin" id="mPK-bn-mKp"/>
+                                                <constraint firstItem="fW9-2u-Q10" firstAttribute="top" secondItem="45G-yu-iTt" secondAttribute="top" constant="2" id="8cY-LN-eGj"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bKh-DB-gAG" secondAttribute="trailing" constant="20" symbolic="YES" id="9EG-FK-hHT"/>
+                                                <constraint firstItem="fW9-2u-Q10" firstAttribute="leading" secondItem="45G-yu-iTt" secondAttribute="leading" constant="8" id="9cA-bj-1ry"/>
+                                                <constraint firstItem="bKh-DB-gAG" firstAttribute="leading" secondItem="fW9-2u-Q10" secondAttribute="trailing" constant="8" symbolic="YES" id="NVM-5M-g6r"/>
+                                                <constraint firstItem="bKh-DB-gAG" firstAttribute="centerY" secondItem="45G-yu-iTt" secondAttribute="centerY" id="gHO-VS-QO1"/>
+                                                <constraint firstItem="fW9-2u-Q10" firstAttribute="width" secondItem="45G-yu-iTt" secondAttribute="width" multiplier="0.2" id="gf8-wK-I02"/>
+                                                <constraint firstAttribute="bottom" secondItem="fW9-2u-Q10" secondAttribute="bottom" constant="2" id="tP7-Wd-qh6"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="todoDateLabel" destination="zpP-be-mGF" id="JTv-yr-Wmx"/>
                                             <outlet property="todoImageView" destination="fW9-2u-Q10" id="2vZ-DF-pZe"/>
                                             <outlet property="todoTitleLabel" destination="bKh-DB-gAG" id="XKt-2j-4Tv"/>
                                         </connections>
@@ -190,7 +169,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2103" y="132"/>
+            <point key="canvasLocation" x="2102.898550724638" y="131.91964285714286"/>
         </scene>
         <!--Todo DetailsVC-->
         <scene sceneID="fxc-Oq-FI0">
